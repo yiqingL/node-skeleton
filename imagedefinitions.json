@@ -1,0 +1,6 @@
+[
+    {
+        "name": "skeleton-container",
+        "imageUri": "363910464766.dkr.ecr.eu-west-1.amazonaws.com/skeleton:latest"
+    }
+]
