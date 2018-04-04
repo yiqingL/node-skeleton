@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entering install phase...
+  pre_build:
+    commands:
+      - echo Entering pre build phase...
+      - npm install
+  build:
+    commands:
+      - echo Entering build phase...
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+artifacts:
+  files:
+    - index.js
+    - package.json
+    - README.md
+    - node_modules/*
