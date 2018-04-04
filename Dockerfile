@@ -1,13 +1,16 @@
 FROM node:alpine
 
-RUN mkdir dist
-ADD ./index.js /dist
-ADD ./package.json /dist
-
 WORKDIR /dist
+
+COPY index.js /dist
+COPY package.json /dist
 
 RUN npm install
 
-EXPOSE 2333
+COPY node_modules /dist
+
+WORKDIR dist
 
 CMD ["npm", "start"]
+
+EXPOSE 80
