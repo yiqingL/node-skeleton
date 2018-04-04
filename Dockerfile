@@ -1,15 +1,13 @@
 FROM node:alpine
 
-WORKDIR /dist
+RUN mkdir dist
 
 COPY index.js /dist
 COPY package.json /dist
 
-RUN npm install
-
-COPY node_modules /dist
-
 WORKDIR dist
+
+RUN npm install
 
 CMD ["npm", "start"]
 
